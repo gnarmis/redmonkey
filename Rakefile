@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project/template/ios'
+require 'bubble-wrap/http'
+require 'bubble-wrap/core'
+require 'bundler'
+Bundler.require
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
