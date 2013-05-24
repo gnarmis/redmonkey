@@ -1,0 +1,2 @@
+class RedditArticleWebViewController < UIViewController
+end
