@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vrG-MO-4nb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="W1W-lO-Rkl">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="vrG-MO-4nb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r26-90-JXM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Xkb-ih-Rqy" kind="relationship" relationship="rootViewController" id="mGk-s8-bJr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y4D-2S-xcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="-28"/>
+        </scene>
+        <!--Reddit List View Controller - All Teh Redditses-->
+        <scene sceneID="c1d-w3-jwj">
+            <objects>
+                <tableViewController id="Xkb-ih-Rqy" customClass="RedditListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HcY-V5-a3b">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Xkb-ih-Rqy" id="Gxx-Ch-hcL"/>
+                            <outlet property="delegate" destination="Xkb-ih-Rqy" id="gjS-4H-aSg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Teh Redditses" id="cjb-VW-7TS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZC-Kl-lv4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437" y="-23"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="RedditListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RedditListViewController.h"/>
+        </class>
+        <class className="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIView.h"/>
+            <relationships>
+                <relationship kind="action" name="handle_gesture:"/>
+            </relationships>
+        </class>
+        <class className="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="content_frame"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
