@@ -14,6 +14,13 @@ class RedditListViewController < UITableViewController
     getRedditData()
   end
 
+  # before segue, it calls prepareForSegue
+
+  def prepareForSegue(segue, sender:sender)
+    article = @articles[self.view.indexPathForCell(sender).row]
+    segue.destinationViewController.url = article['data']['url']
+  end
+
   def tableView(tableView, cellForRowAtIndexPath:indexPath)
     article = @articles[indexPath.row]
     reuseIdentifier = "redmonkeyCellIdentifier"
