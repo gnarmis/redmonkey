@@ -181,7 +181,7 @@
 
 
 
-
+-(IBAction) viewDidLoad;
 
 @end
 
@@ -192,7 +192,8 @@
 
 
 
-
+-(IBAction) viewDidLoad;
+-(IBAction) getRedditData:(id) subreddit;
 
 @end
 
